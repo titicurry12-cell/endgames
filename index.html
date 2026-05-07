@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ NUMERO FLASH - HIGH TECH Edition ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-scanlines"></div>
+
+    <div class="game-mainframe">
+        
+        <div id="start-screen" class="overlay active">
+            <div class="tech-card">
+                <div class="corner-top-left"></div>
+                <div class="corner-bottom-right"></div>
+                <h1 class="neon-text-blue">SYSTEM<br><span class="neon-text-pink">R.E.F.L.E.X</span></h1>
+                <p class="status-text"> > INITIALISATION REQUISE...</p>
+                <button id="start-btn" class="glowing-btn">LANCER LE JEU</button>
+            </div>
+        </div>
+
+        <div id="end-screen" class="overlay">
+            <div class="tech-card result-card">
+                <h2 class="neon-text-pink">FIN DE PARTIE</h2>
+                <div class="divider"></div>
+                <p class="label">SCORE FINAL SYNC.</p>
+                <div id="final-score" class="big-score neon-text-blue">0</div>
+                <button onclick="location.reload()" class="glowing-btn pink-variant">REDÉMARRER</button>
+            </div>
+        </div>
+
+        <header class="hud-header">
+            <div class="hud-box timer-box">
+                <span class="label">TEMPS</span>
+                <span id="timer" class="value">60</span>
+            </div>
+            <div class="hud-box score-box">
+                <span class="label">SCORE</span>
+                <span id="score" class="value">0</span>
+            </div>
+        </header>
+
+        <main class="game-core">
+            <div class="display-mainframe">
+                <div class="tech-grid-bg"></div>
+                
+                <div class="target-zone">
+                    <span class="label-tiny">CIBLE ACTUELLE</span>
+                    <div id="target-number" class="number-display neon-text-blue">?</div>
+                </div>
+                
+                <div class="time-bar-container">
+                    <div id="inner-bar" class="time-bar-fill"></div>
+                </div>
+            </div>
+
+            <div class="control-numpad" id="numpad">
+                </div>
+        </main>
+
+        <footer class="hud-footer">
+            <span class="status-msg">UNITÉ CENTRALE : OPÉRATIONNELLE</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
